@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: c3122917-21ea-4748-8ae9-d4b2491e364f
 management:
-  docChecksum: 058c8ea0d515cbeee7f3c26b216a0c1b
+  docChecksum: 77af4ba32f988a81660b7a7075902cd4
   docVersion: 1.0.0
   speakeasyVersion: 1.542.3
   generationVersion: 2.597.9
-  releaseVersion: 0.1.6
-  configChecksum: 6138532764b25f700ae3110619339700
+  releaseVersion: 0.1.7
+  configChecksum: e18013b4290e054e2a0bfd4f3eb1ec55
   repoURL: https://github.com/noelrohi/testify-ts.git
   installationURL: https://github.com/noelrohi/testify-ts
   published: true

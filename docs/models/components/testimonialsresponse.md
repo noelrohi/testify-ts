@@ -13,6 +13,8 @@ let value: TestimonialsResponse = {
       text: "This product is amazing!",
       socialUrl: "https://twitter.com/johndoe",
       imageUrl: "https://example.com/avatar.jpg",
+      position: "CEO",
+      companyName: "Acme Inc.",
       createdAt: "2024-01-01T12:00:00Z",
       updatedAt: "2024-01-01T12:00:00Z",
       isPublished: true,
