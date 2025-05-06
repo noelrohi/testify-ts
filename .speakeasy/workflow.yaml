@@ -1,0 +1,20 @@
+workflowVersion: 1.0.0
+speakeasyVersion: latest
+sources:
+    Testify API:
+        inputs:
+            - location: https://usetestify.xyz/api/doc
+        overlays:
+            - location: .speakeasy/speakeasy-modifications-overlay.yaml
+        registry:
+            location: registry.speakeasyapi.dev/hov/noelrohi/testify-api
+targets:
+    testify:
+        target: typescript
+        source: Testify API
+        codeSamples:
+            registry:
+                location: registry.speakeasyapi.dev/hov/noelrohi/testify-api-typescript-code-samples
+            labelOverride:
+                fixedValue: Typescript (SDK)
+            blocking: false

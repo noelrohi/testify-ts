@@ -1,0 +1,38 @@
+speakeasyVersion: 1.542.3
+sources:
+    Testify API:
+        sourceNamespace: testify-api
+        sourceRevisionDigest: sha256:a2c58185db61645b915acc8786df1f374a512c8ddc8f6d1ef7a0c3095b3ac3fb
+        sourceBlobDigest: sha256:5282637fcef4cb53849c0a265dafc28b52887be7140fc9c0c5408c6ba8479837
+        tags:
+            - latest
+            - 1.0.0
+targets:
+    testify:
+        source: Testify API
+        sourceNamespace: testify-api
+        sourceRevisionDigest: sha256:a2c58185db61645b915acc8786df1f374a512c8ddc8f6d1ef7a0c3095b3ac3fb
+        sourceBlobDigest: sha256:5282637fcef4cb53849c0a265dafc28b52887be7140fc9c0c5408c6ba8479837
+        codeSamplesNamespace: testify-api-typescript-code-samples
+        codeSamplesRevisionDigest: sha256:7a7561b6920216add481972b025845f26d9f304fb7ac1a2ed6bb5d10d3736e86
+workflow:
+    workflowVersion: 1.0.0
+    speakeasyVersion: latest
+    sources:
+        Testify API:
+            inputs:
+                - location: https://usetestify.xyz/api/doc
+            overlays:
+                - location: .speakeasy/speakeasy-modifications-overlay.yaml
+            registry:
+                location: registry.speakeasyapi.dev/hov/noelrohi/testify-api
+    targets:
+        testify:
+            target: typescript
+            source: Testify API
+            codeSamples:
+                registry:
+                    location: registry.speakeasyapi.dev/hov/noelrohi/testify-api-typescript-code-samples
+                labelOverride:
+                    fixedValue: Typescript (SDK)
+                blocking: false
