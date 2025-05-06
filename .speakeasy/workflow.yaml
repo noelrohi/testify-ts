@@ -12,6 +12,9 @@ targets:
     testify:
         target: typescript
         source: Testify API
+        publish:
+            npm:
+                token: $npm_token
         codeSamples:
             registry:
                 location: registry.speakeasyapi.dev/hov/noelrohi/testify-api-typescript-code-samples
