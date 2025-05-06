@@ -13,6 +13,8 @@ export type Testimonial = {
   text: string;
   socialUrl: string;
   imageUrl: string | null;
+  position?: string | null | undefined;
+  companyName?: string | null | undefined;
   createdAt: string;
   updatedAt: string;
   isPublished: boolean;
@@ -30,6 +32,8 @@ export const Testimonial$inboundSchema: z.ZodType<
   text: z.string(),
   socialUrl: z.string(),
   imageUrl: z.nullable(z.string()),
+  position: z.nullable(z.string()).optional(),
+  companyName: z.nullable(z.string()).optional(),
   createdAt: z.string(),
   updatedAt: z.string(),
   isPublished: z.boolean(),
@@ -43,6 +47,8 @@ export type Testimonial$Outbound = {
   text: string;
   socialUrl: string;
   imageUrl: string | null;
+  position?: string | null | undefined;
+  companyName?: string | null | undefined;
   createdAt: string;
   updatedAt: string;
   isPublished: boolean;
@@ -60,6 +66,8 @@ export const Testimonial$outboundSchema: z.ZodType<
   text: z.string(),
   socialUrl: z.string(),
   imageUrl: z.nullable(z.string()),
+  position: z.nullable(z.string()).optional(),
+  companyName: z.nullable(z.string()).optional(),
   createdAt: z.string(),
   updatedAt: z.string(),
   isPublished: z.boolean(),
