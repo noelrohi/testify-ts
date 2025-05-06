@@ -2,7 +2,7 @@ speakeasyVersion: 1.542.3
 sources:
     Testify API:
         sourceNamespace: testify-api
-        sourceRevisionDigest: sha256:725215f2dec4b5ad49c7b37c1d5a43c5cc4c788797f9dc10c7335bf0d3146de5
+        sourceRevisionDigest: sha256:71af2b66b82f3409ca71e18e0e7d9b77b057f3511b81ab607a9dce5c8298baad
         sourceBlobDigest: sha256:f022962dfa04e4d5cda1ed7ca6f275d2c25a0ddeea577b7d578af7e25f94a2b7
         tags:
             - latest
@@ -11,10 +11,10 @@ targets:
     testify:
         source: Testify API
         sourceNamespace: testify-api
-        sourceRevisionDigest: sha256:725215f2dec4b5ad49c7b37c1d5a43c5cc4c788797f9dc10c7335bf0d3146de5
+        sourceRevisionDigest: sha256:71af2b66b82f3409ca71e18e0e7d9b77b057f3511b81ab607a9dce5c8298baad
         sourceBlobDigest: sha256:f022962dfa04e4d5cda1ed7ca6f275d2c25a0ddeea577b7d578af7e25f94a2b7
         codeSamplesNamespace: testify-api-typescript-code-samples
-        codeSamplesRevisionDigest: sha256:c1b1d20bbcba9de72601079b1fbb987677d29a7882d4997e903e959452973c81
+        codeSamplesRevisionDigest: sha256:c0cefec7c4b37365a253063a6b02d71371b52d27821aad598493a7556ffc6ad3
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
