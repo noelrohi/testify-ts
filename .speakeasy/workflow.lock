@@ -2,19 +2,20 @@ speakeasyVersion: 1.542.3
 sources:
     Testify API:
         sourceNamespace: testify-api
-        sourceRevisionDigest: sha256:a2c58185db61645b915acc8786df1f374a512c8ddc8f6d1ef7a0c3095b3ac3fb
-        sourceBlobDigest: sha256:5282637fcef4cb53849c0a265dafc28b52887be7140fc9c0c5408c6ba8479837
+        sourceRevisionDigest: sha256:22ae495ea6736a7d64d66e9571e4d7b767477fe20debf250e5e5f9588d1d8d3b
+        sourceBlobDigest: sha256:f022962dfa04e4d5cda1ed7ca6f275d2c25a0ddeea577b7d578af7e25f94a2b7
         tags:
             - latest
+            - speakeasy-sdk-regen-1746518001
             - 1.0.0
 targets:
     testify:
         source: Testify API
         sourceNamespace: testify-api
-        sourceRevisionDigest: sha256:a2c58185db61645b915acc8786df1f374a512c8ddc8f6d1ef7a0c3095b3ac3fb
-        sourceBlobDigest: sha256:5282637fcef4cb53849c0a265dafc28b52887be7140fc9c0c5408c6ba8479837
+        sourceRevisionDigest: sha256:22ae495ea6736a7d64d66e9571e4d7b767477fe20debf250e5e5f9588d1d8d3b
+        sourceBlobDigest: sha256:f022962dfa04e4d5cda1ed7ca6f275d2c25a0ddeea577b7d578af7e25f94a2b7
         codeSamplesNamespace: testify-api-typescript-code-samples
-        codeSamplesRevisionDigest: sha256:7a7561b6920216add481972b025845f26d9f304fb7ac1a2ed6bb5d10d3736e86
+        codeSamplesRevisionDigest: sha256:2b25d70b22d0dfe3a147c5bd3035873dcce7916be89f861443e35c4326d75a1a
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
