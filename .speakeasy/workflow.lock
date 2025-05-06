@@ -2,20 +2,19 @@ speakeasyVersion: 1.542.3
 sources:
     Testify API:
         sourceNamespace: testify-api
-        sourceRevisionDigest: sha256:22ae495ea6736a7d64d66e9571e4d7b767477fe20debf250e5e5f9588d1d8d3b
+        sourceRevisionDigest: sha256:725215f2dec4b5ad49c7b37c1d5a43c5cc4c788797f9dc10c7335bf0d3146de5
         sourceBlobDigest: sha256:f022962dfa04e4d5cda1ed7ca6f275d2c25a0ddeea577b7d578af7e25f94a2b7
         tags:
             - latest
-            - speakeasy-sdk-regen-1746518001
             - 1.0.0
 targets:
     testify:
         source: Testify API
         sourceNamespace: testify-api
-        sourceRevisionDigest: sha256:22ae495ea6736a7d64d66e9571e4d7b767477fe20debf250e5e5f9588d1d8d3b
+        sourceRevisionDigest: sha256:725215f2dec4b5ad49c7b37c1d5a43c5cc4c788797f9dc10c7335bf0d3146de5
         sourceBlobDigest: sha256:f022962dfa04e4d5cda1ed7ca6f275d2c25a0ddeea577b7d578af7e25f94a2b7
         codeSamplesNamespace: testify-api-typescript-code-samples
-        codeSamplesRevisionDigest: sha256:2b25d70b22d0dfe3a147c5bd3035873dcce7916be89f861443e35c4326d75a1a
+        codeSamplesRevisionDigest: sha256:c1b1d20bbcba9de72601079b1fbb987677d29a7882d4997e903e959452973c81
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
@@ -31,6 +30,9 @@ workflow:
         testify:
             target: typescript
             source: Testify API
+            publish:
+                npm:
+                    token: $npm_token
             codeSamples:
                 registry:
                     location: registry.speakeasyapi.dev/hov/noelrohi/testify-api-typescript-code-samples
