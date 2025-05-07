@@ -17,3 +17,13 @@ Based on:
 - [typescript v0.1.7] .
 ### Releases
 - [NPM v0.1.7] https://www.npmjs.com/package/@trytestify/sdk/v/0.1.7 - .
+
+## 2025-05-07 02:39:58
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.542.3 (2.597.9) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [typescript v0.1.8] .
+### Releases
+- [NPM v0.1.8] https://www.npmjs.com/package/@trytestify/sdk/v/0.1.8 - .

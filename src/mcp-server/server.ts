@@ -24,7 +24,7 @@ export function createMCPServer(deps: {
 }) {
   const server = new McpServer({
     name: "Testify",
-    version: "0.1.7",
+    version: "0.1.8",
   });
 
   const client = new TestifyCore({
