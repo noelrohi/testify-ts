@@ -13,6 +13,7 @@ import {
 } from "./resources.js";
 import { MCPScope } from "./scopes.js";
 import { createRegisterTool } from "./tools.js";
+import { tool$testimonialsCreate } from "./tools/testimonialsCreate.js";
 import { tool$testimonialsGet } from "./tools/testimonialsGet.js";
 
 export function createMCPServer(deps: {
@@ -24,7 +25,7 @@ export function createMCPServer(deps: {
 }) {
   const server = new McpServer({
     name: "Testify",
-    version: "0.1.8",
+    version: "0.1.11",
   });
 
   const client = new TestifyCore({
@@ -54,6 +55,7 @@ export function createMCPServer(deps: {
   void register; // suppress unused warnings
 
   tool(tool$testimonialsGet);
+  tool(tool$testimonialsCreate);
 
   return server;
 }

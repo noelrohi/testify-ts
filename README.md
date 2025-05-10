@@ -193,6 +193,7 @@ run();
 ### [testimonials](docs/sdks/testimonials/README.md)
 
 * [get](docs/sdks/testimonials/README.md#get)
+* [create](docs/sdks/testimonials/README.md#create)
 
 </details>
 <!-- End Available Resources and Operations [operations] -->
@@ -212,6 +213,7 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 
 <summary>Available standalone functions</summary>
 
+- [`testimonialsCreate`](docs/sdks/testimonials/README.md#create)
 - [`testimonialsGet`](docs/sdks/testimonials/README.md#get)
 
 </details>
@@ -288,20 +290,19 @@ run();
 
 Some methods specify known errors which can be thrown. All the known errors are enumerated in the `models/errors/errors.ts` module. The known errors for a method are documented under the *Errors* tables in SDK docs. For example, the `get` method may throw the following errors:
 
-| Error Type                 | Status Code | Content Type     |
-| -------------------------- | ----------- | ---------------- |
-| errors.BadRequestError     | 400         | application/json |
-| errors.InternalServerError | 500         | application/json |
-| errors.APIError            | 4XX, 5XX    | \*/\*            |
+| Error Type           | Status Code | Content Type     |
+| -------------------- | ----------- | ---------------- |
+| errors.StandardError | 400         | application/json |
+| errors.StandardError | 500         | application/json |
+| errors.APIError      | 4XX, 5XX    | \*/\*            |
 
 If the method throws an error and it is not captured by the known errors, it will default to throwing a `APIError`.
 
 ```typescript
 import { Testify } from "@trytestify/sdk";
 import {
-  BadRequestError,
-  InternalServerError,
   SDKValidationError,
+  StandardError,
 } from "@trytestify/sdk/models/errors";
 
 const testify = new Testify();
@@ -325,13 +326,13 @@ async function run() {
         console.error(err.rawValue);
         return;
       }
-      case (err instanceof BadRequestError): {
-        // Handle err.data$: BadRequestErrorData
+      case (err instanceof StandardError): {
+        // Handle err.data$: StandardErrorData
         console.error(err);
         return;
       }
-      case (err instanceof InternalServerError): {
-        // Handle err.data$: InternalServerErrorData
+      case (err instanceof StandardError): {
+        // Handle err.data$: StandardErrorData
         console.error(err);
         return;
       }
@@ -363,14 +364,45 @@ In some rare cases, the SDK can fail to get a response from the server or even m
 <!-- Start Server Selection [server] -->
 ## Server Selection
 
-### Override Server URL Per-Client
+### Select Server by Index
 
-The default server can be overridden globally by passing a URL to the `serverURL: string` optional parameter when initializing the SDK client instance. For example:
+You can override the default server globally by passing a server index to the `serverIdx: number` optional parameter when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
+
+| #   | Server                   | Description            |
+| --- | ------------------------ | ---------------------- |
+| 0   | `https://usetestify.xyz` | Production environment |
+| 1   | `http://localhost:3000`  | Local environment      |
+
+#### Example
+
 ```typescript
 import { Testify } from "@trytestify/sdk";
 
 const testify = new Testify({
-  serverURL: "https://usetestify.xyz",
+  serverIdx: 1,
+});
+
+async function run() {
+  const result = await testify.testimonials.get({
+    spaceId: "clxkzq8e00000qzj9f9f9f9f9",
+  });
+
+  // Handle the result
+  console.log(result);
+}
+
+run();
+
+```
+
+### Override Server URL Per-Client
+
+The default server can also be overridden globally by passing a URL to the `serverURL: string` optional parameter when initializing the SDK client instance. For example:
+```typescript
+import { Testify } from "@trytestify/sdk";
+
+const testify = new Testify({
+  serverURL: "http://localhost:3000",
 });
 
 async function run() {

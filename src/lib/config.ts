@@ -12,9 +12,13 @@ import { Params, pathToFunc } from "./url.js";
  */
 export const ServerList = [
   /**
-   * Current environment
+   * Production environment
    */
   "https://usetestify.xyz",
+  /**
+   * Local environment
+   */
+  "http://localhost:3000",
 ] as const;
 
 export type SDKOptions = {
@@ -55,7 +59,7 @@ export function serverURLFromOptions(options: SDKOptions): URL | null {
 export const SDK_METADATA = {
   language: "typescript",
   openapiDocVersion: "1.0.0",
-  sdkVersion: "0.1.8",
-  genVersion: "2.597.9",
-  userAgent: "speakeasy-sdk/typescript 0.1.8 2.597.9 1.0.0 @trytestify/sdk",
+  sdkVersion: "0.1.11",
+  genVersion: "2.598.22",
+  userAgent: "speakeasy-sdk/typescript 0.1.11 2.598.22 1.0.0 @trytestify/sdk",
 } as const;

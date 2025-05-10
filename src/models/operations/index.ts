@@ -3,3 +3,4 @@
  */
 
 export * from "./getapitestimonials.js";
+export * from "./postapitestimonialsspaceid.js";
