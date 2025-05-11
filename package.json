@@ -1,6 +1,6 @@
 {
   "name": "@trytestify/sdk",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "author": "Speakeasy",
   "type": "module",
   "bin": {
