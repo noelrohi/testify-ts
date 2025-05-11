@@ -5,8 +5,8 @@ management:
   docVersion: 1.0.0
   speakeasyVersion: 1.543.4
   generationVersion: 2.598.22
-  releaseVersion: 0.1.11
-  configChecksum: c78d73c052fcd3573eb06fbb2b5579db
+  releaseVersion: 0.1.12
+  configChecksum: 0864431f7b85ed009b2969d95fbe981e
   repoURL: https://github.com/noelrohi/testify-ts.git
   installationURL: https://github.com/noelrohi/testify-ts
   published: true
