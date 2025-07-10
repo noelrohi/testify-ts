@@ -19,10 +19,9 @@ const testify = new Testify();
 
 async function run() {
   const result = await testify.testimonials.get({
-    spaceId: "clxkzq8e00000qzj9f9f9f9f9",
+    spaceId: "<id>",
   });
 
-  // Handle the result
   console.log(result);
 }
 
@@ -43,17 +42,14 @@ const testify = new TestifyCore();
 
 async function run() {
   const res = await testimonialsGet(testify, {
-    spaceId: "clxkzq8e00000qzj9f9f9f9f9",
+    spaceId: "<id>",
   });
-
-  if (!res.ok) {
-    throw res.error;
+  if (res.ok) {
+    const { value: result } = res;
+    console.log(result);
+  } else {
+    console.log("testimonialsGet failed:", res.error);
   }
-
-  const { value: result } = res;
-
-  // Handle the result
-  console.log(result);
 }
 
 run();
@@ -102,7 +98,6 @@ async function run() {
     },
   });
 
-  // Handle the result
   console.log(result);
 }
 
@@ -133,15 +128,12 @@ async function run() {
       companyName: "Innovate Corp",
     },
   });
-
-  if (!res.ok) {
-    throw res.error;
+  if (res.ok) {
+    const { value: result } = res;
+    console.log(result);
+  } else {
+    console.log("testimonialsCreate failed:", res.error);
   }
-
-  const { value: result } = res;
-
-  // Handle the result
-  console.log(result);
 }
 
 run();
