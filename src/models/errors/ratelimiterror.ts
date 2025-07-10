@@ -3,20 +3,22 @@
  */
 
 import * as z from "zod";
+import { TestifyError } from "./testifyerror.js";
 
 export type RateLimitErrorData = {
   message: string;
 };
 
-export class RateLimitError extends Error {
+export class RateLimitError extends TestifyError {
   /** The original data that was passed to this error instance. */
   data$: RateLimitErrorData;
 
-  constructor(err: RateLimitErrorData) {
-    const message = "message" in err && typeof err.message === "string"
-      ? err.message
-      : `API error occurred: ${JSON.stringify(err)}`;
-    super(message);
+  constructor(
+    err: RateLimitErrorData,
+    httpMeta: { response: Response; request: Request; body: string },
+  ) {
+    const message = err.message || `API error occurred: ${JSON.stringify(err)}`;
+    super(message, httpMeta);
     this.data$ = err;
 
     this.name = "RateLimitError";
@@ -30,9 +32,16 @@ export const RateLimitError$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   message: z.string(),
+  request$: z.instanceof(Request),
+  response$: z.instanceof(Response),
+  body$: z.string(),
 })
   .transform((v) => {
-    return new RateLimitError(v);
+    return new RateLimitError(v, {
+      request: v.request$,
+      response: v.response$,
+      body: v.body$,
+    });
   });
 
 /** @internal */

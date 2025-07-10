@@ -3,28 +3,28 @@ id: c3122917-21ea-4748-8ae9-d4b2491e364f
 management:
   docChecksum: c0a55f83eb1300a5f756aef17d6ae98e
   docVersion: 1.0.0
-  speakeasyVersion: 1.543.4
-  generationVersion: 2.598.22
-  releaseVersion: 0.1.12
-  configChecksum: 0864431f7b85ed009b2969d95fbe981e
+  speakeasyVersion: 1.580.1
+  generationVersion: 2.656.3
+  releaseVersion: 0.2.0
+  configChecksum: 94398abd1f8d99680312f2554d59c5be
   repoURL: https://github.com/noelrohi/testify-ts.git
   installationURL: https://github.com/noelrohi/testify-ts
   published: true
 features:
   typescript:
     additionalDependencies: 0.1.0
-    core: 3.21.7
+    core: 3.21.14
     defaultEnabledRetries: 0.1.0
     devContainers: 2.90.0
     envVarSecurityUsage: 0.1.2
     globalSecurityCallbacks: 0.1.0
     globalServerURLs: 2.82.5
-    mcpServer: 0.9.2
+    mcpServer: 0.9.3
     nameOverrides: 2.81.2
     nullables: 0.1.1
     responseFormat: 0.2.3
     retries: 2.83.0
-    sdkHooks: 0.2.0
+    sdkHooks: 0.3.0
 generatedFiles:
   - .devcontainer/README.md
   - .devcontainer/devcontainer.json
@@ -45,6 +45,10 @@ generatedFiles:
   - docs/sdks/testify/README.md
   - docs/sdks/testimonials/README.md
   - eslint.config.mjs
+  - examples/.env.template
+  - examples/README.md
+  - examples/package.json
+  - examples/testimonialsGet.example.ts
   - jsr.json
   - package.json
   - src/core.ts
@@ -93,8 +97,10 @@ generatedFiles:
   - src/models/errors/httpclienterrors.ts
   - src/models/errors/index.ts
   - src/models/errors/ratelimiterror.ts
+  - src/models/errors/responsevalidationerror.ts
   - src/models/errors/sdkvalidationerror.ts
   - src/models/errors/standarderror.ts
+  - src/models/errors/testifyerror.ts
   - src/models/operations/getapitestimonials.ts
   - src/models/operations/index.ts
   - src/models/operations/postapitestimonialsspaceid.ts
@@ -116,7 +122,7 @@ examples:
     speakeasy-default-get-/api/testimonials:
       parameters:
         query:
-          spaceId: "clxkzq8e00000qzj9f9f9f9f9"
+          spaceId: "<id>"
       responses:
         "200":
           application/json: {"testimonials": []}
@@ -140,5 +146,5 @@ examples:
           application/json: {"message": "Too Many Requests"}
         "500":
           application/json: {"message": "Hello World"}
-examplesVersion: 1.0.1
+examplesVersion: 1.0.2
 generatedTests: {}

@@ -6,10 +6,9 @@ const testify = new Testify();
 
 async function run() {
   const result = await testify.testimonials.get({
-    spaceId: "clxkzq8e00000qzj9f9f9f9f9",
+    spaceId: "<id>",
   });
 
-  // Handle the result
   console.log(result);
 }
 
