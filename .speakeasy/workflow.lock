@@ -1,4 +1,4 @@
-speakeasyVersion: 1.580.1
+speakeasyVersion: 1.598.0
 sources:
     Testify API:
         sourceNamespace: testify-api
@@ -6,7 +6,7 @@ sources:
         sourceBlobDigest: sha256:8a98ef35ebd984cbf8a43bb2393ae6bf16a9f858daec8362ca2b89f632023762
         tags:
             - latest
-            - speakeasy-sdk-regen-1752112057
+            - speakeasy-sdk-regen-1754445309
             - 1.0.0
 targets:
     testify:
@@ -15,7 +15,7 @@ targets:
         sourceRevisionDigest: sha256:5c71bd34bf851380b064f4f8747c6dfaa0a93048cd97cac6978cf758588d2ed1
         sourceBlobDigest: sha256:8a98ef35ebd984cbf8a43bb2393ae6bf16a9f858daec8362ca2b89f632023762
         codeSamplesNamespace: testify-api-typescript-code-samples
-        codeSamplesRevisionDigest: sha256:8d7a74ecf6dbfa917541811431f38947bf6b499989187cd5b03a8aaf272848be
+        codeSamplesRevisionDigest: sha256:3faefa2770efdf00d4477aa24d55e1ea845a3b1ad5b899c7d2ca3c43fda44091
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest

@@ -12,6 +12,7 @@
 
 ### Example Usage
 
+<!-- UsageSnippet language="typescript" operationID="get_/api/testimonials" method="get" path="/api/testimonials" -->
 ```typescript
 import { Testify } from "@trytestify/sdk";
 
@@ -80,6 +81,7 @@ run();
 
 ### Example Usage
 
+<!-- UsageSnippet language="typescript" operationID="post_/api/testimonials/{spaceId}" method="post" path="/api/testimonials/{spaceId}" -->
 ```typescript
 import { Testify } from "@trytestify/sdk";
 
