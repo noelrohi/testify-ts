@@ -8,7 +8,7 @@ dotenv.config();
  * Example usage of the @trytestify/sdk SDK
  *
  * To run this example from the examples directory:
- * npm run build && npx tsx testimonialsGet.ts
+ * npm run build && npx tsx testimonialsGet.example.ts
  */
 
 import { Testify } from "@trytestify/sdk";
